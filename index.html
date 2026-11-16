@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">SpendWise<span>.</span></h2>
+
+            <p class="menu-heading">MENU</p>
+
+            <a href="#" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="#expenses" class="nav-link">
+                <span>◷</span> Transactions
+            </a>
+
+            <div class="sidebar-bottom">
+                <p>Manage your money.</p>
+                <small>Simple. Smart. Organized.</small>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="date" id="currentDate"></p>
+                    <h1>Dashboard</h1>
+                    <p class="subtitle">Welcome back! Here's your spending overview.</p>
+                </div>
+
+                <div class="profile">M</div>
+            </header>
+
+            <!-- Total Expenses -->
+            <section class="summary-card">
+                <div>
+                    <p class="summary-label">TOTAL EXPENSES</p>
+                    <h2 id="totalAmount">₹0.00</h2>
+                    <p class="summary-note">Your total spending so far</p>
+                </div>
+
+                <div class="summary-icon">₹</div>
+            </section>
+
+            <!-- Add Expense Form -->
+            <section class="form-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>Add New Expense</h2>
+                        <p>Enter the details of your spending.</p>
+                    </div>
+                </div>
+
+                <form id="expenseForm">
+
+                    <div class="input-group">
+                        <label for="expenseName">Expense Name</label>
+                        <input
+                            type="text"
+                            id="expenseName"
+                            placeholder="e.g. Groceries, Food, Travel"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="expenseAmount">Amount (₹)</label>
+                        <input
+                            type="number"
+                            id="expenseAmount"
+                            placeholder="Enter amount"
+                            min="0.01"
+                            step="0.01"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="add-btn">
+                        + Add Expense
+                    </button>
+
+                </form>
+            </section>
+
+            <!-- Expense History -->
+            <section class="history-section" id="expenses">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Recent Transactions</h2>
+                        <p>Keep track of where your money goes.</p>
+                    </div>
+
+                    <span class="transaction-count" id="expenseCount">
+                        0 expenses
+                    </span>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>EXPENSE</th>
+                                <th>DATE</th>
+                                <th>AMOUNT</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="expenseList">
+                            <tr>
+                                <td colspan="4" class="empty-message">
+                                    No expenses added yet.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <footer>
+                SpendWise. &copy; 2026 | Manage your expenses simply.
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

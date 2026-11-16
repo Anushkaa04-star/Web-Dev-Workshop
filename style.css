@@ -1,0 +1,430 @@
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F3F2FA;
+    color: #26345C;
+}
+
+/* =========================
+   MAIN DASHBOARD
+========================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 240px;
+    background-color: #26345C;
+    color: white;
+    padding: 35px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 25px;
+    margin-bottom: 65px;
+}
+
+.logo span {
+    color: #AEB9EB;
+}
+
+.menu-heading {
+    color: #B8C1DC;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #DCE1F0;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #414F7B;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    border-top: 1px solid #536087;
+    padding-top: 20px;
+    color: #DCE1F0;
+}
+
+.sidebar-bottom small {
+    display: block;
+    margin-top: 8px;
+    color: #B8C1DC;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    flex: 1;
+    padding: 40px 55px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.date {
+    color: #858BA4;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #858BA4;
+    font-size: 14px;
+}
+
+.profile {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #DCDCF0;
+    color: #26345C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* =========================
+   TOTAL EXPENSES CARD
+========================= */
+
+.summary-card {
+    background-color: #26345C;
+    color: white;
+    padding: 30px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.summary-label {
+    color: #C6CDEC;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.summary-card h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.summary-note {
+    color: #DCE1F0;
+    font-size: 13px;
+}
+
+.summary-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    background-color: #414F7B;
+    color: #E0E3FA;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   FORM AND HISTORY SECTIONS
+========================= */
+
+.form-section,
+.history-section {
+    background-color: #FFFFFF;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #E4E3EF;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #858BA4;
+    font-size: 13px;
+}
+
+/* =========================
+   EXPENSE FORM
+========================= */
+
+form {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 0;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #DCDCF0;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #26345C;
+}
+
+.input-group input:focus {
+    border-color: #6878B8;
+    box-shadow: 0 0 0 3px #E9EAF7;
+}
+
+.add-btn {
+    background-color: #6878B8;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #53649F;
+}
+
+/* =========================
+   EXPENSE TABLE
+========================= */
+
+.transaction-count {
+    background-color: #E9EAF7;
+    color: #53649F;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    color: #858BA4;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #EAEAF2;
+}
+
+td {
+    padding: 17px 10px;
+    border-bottom: 1px solid #EAEAF2;
+    font-size: 13px;
+}
+
+.expense-name {
+    font-weight: bold;
+}
+
+.amount {
+    color: #53649F;
+    font-weight: bold;
+}
+
+/* Delete Button */
+
+.delete-btn {
+    background-color: #FCEDEE;
+    color: #B44B57;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #F5D8DC;
+}
+
+.empty-message {
+    text-align: center;
+    color: #9295A6;
+    padding: 35px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    color: #9295A6;
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 180px;
+        padding: 25px 15px;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 550px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .logo {
+        margin-bottom: 18px;
+    }
+
+    .menu-heading,
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .nav-link {
+        display: inline-flex;
+        margin: 0;
+    }
+
+    .main-content {
+        padding: 25px 15px;
+    }
+
+    .topbar h1 {
+        font-size: 25px;
+    }
+
+    .summary-card {
+        padding: 22px;
+    }
+
+    .summary-card h2 {
+        font-size: 30px;
+    }
+
+    .form-section,
+    .history-section {
+        padding: 20px 15px;
+    }
+
+    .section-heading {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    th,
+    td {
+        padding: 13px 8px;
+        white-space: nowrap;
+    }
+}
