@@ -41,6 +41,7 @@ body {
 .logo {
     font-size: 25px;
     margin-bottom: 65px;
+    margin-top: 30px;
 }
 
 .logo span {
@@ -118,17 +119,7 @@ body {
     font-size: 14px;
 }
 
-.profile {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: #DCDCF0;
-    color: #26345C;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
+
 
 /* =========================
    TOTAL EXPENSES CARD
@@ -160,18 +151,6 @@ body {
 .summary-note {
     color: #DCE1F0;
     font-size: 13px;
-}
-
-.summary-icon {
-    width: 65px;
-    height: 65px;
-    border-radius: 12px;
-    background-color: #414F7B;
-    color: #E0E3FA;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* =========================
